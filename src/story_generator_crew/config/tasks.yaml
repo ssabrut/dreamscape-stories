@@ -1,5 +1,46 @@
 input_aggregator_task:
   description: >
-      Collect and organize user preferences into a structured format that can be easily processed by subsequent agents. This includes gathering details about themes, characters, settings, plot elements, style, and tone preferences specified by the user.
+    This task involves collecting and organizing user input parameters. The input parameters include themes, characters, settings, plot elements, and stylistic choices provided by the user. The task should structure these inputs into a comprehensive profile that can be easily processed by subsequent agents.
+
+    Input parameters:
+    - theme: The overall theme or genre of the story (e.g., fantasy, adventure, mystery).
+    - main_character: Details about the main character (e.g., name, age, gender, personality traits, appearance).
+    - supporting_characters: Details about secondary characters (e.g., friends, family, pets).
+    - setting: The primary setting of the story (e.g., enchanted forest, outer space, modern city).
+    - time_period: The time period in which the story takes place (e.g., medieval, futuristic, contemporary).
+    - plot_points: Key events or conflicts in the story (e.g., a treasure hunt, a rescue mission).
+    - mood: The desired tone of the story (e.g., happy, sad, exciting).
+    - narrative_style: The style of narration (e.g., first-person, third-person, poetic).
+    - language_complexity: The complexity of the language used (e.g., suitable for children, teens, adults).
+
   expected_output: >
-    A comprehensive profile of user inputs, including selected themes, character details, settings, plot elements, style, and tone preferences. The output should be structured in a way that can be directly utilized by the LLM Story Generator for creating the story.
+    A comprehensive profile document that organizes the user’s input parameters into specific fields, ready for further processing by the LLM Story Generator. The profile should include all the necessary details for themes, characters, settings, plot points, and stylistic choices, ensuring a structured and coherent format.
+
+    Example output:
+    {
+      "theme": "Fantasy",
+      "main_character": {
+        "name": "Ella",
+        "age": 10,
+        "gender": "Female",
+        "personality_traits": ["brave", "curious"],
+        "appearance": "young girl with brown hair and blue eyes"
+      },
+      "supporting_characters": [
+        {
+          "name": "Fox",
+          "type": "talking animal",
+          "personality_traits": ["wise", loyal"]
+        }
+      ],
+      "setting": "Enchanted forest",
+      "time_period": "Medieval",
+      "plot_points": [
+        "Ella finds a magical artifact",
+        "Ella meets a talking fox",
+        "Ella overcomes a dark sorcerer"
+      ],
+      "mood": "Adventurous and whimsical",
+      "narrative_style": "Third-person",
+      "language_complexity": "Suitable for children"
+    }
