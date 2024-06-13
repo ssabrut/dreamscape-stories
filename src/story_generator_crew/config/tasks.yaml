@@ -1,0 +1,5 @@
+input_aggregator_task:
+  description: >
+      Collect and organize user preferences into a structured format that can be easily processed by subsequent agents. This includes gathering details about themes, characters, settings, plot elements, style, and tone preferences specified by the user.
+  expected_output: >
+    A comprehensive profile of user inputs, including selected themes, character details, settings, plot elements, style, and tone preferences. The output should be structured in a way that can be directly utilized by the LLM Story Generator for creating the story.
