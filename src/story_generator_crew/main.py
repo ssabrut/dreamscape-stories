@@ -16,16 +16,16 @@ def run():
         },
         "supporting_characters": [
             {
-            "name": "Aria",
-            "role": "Friend",
-            "personality_traits": ["Intelligent", "Loyal"],
-            "appearance": "A girl with long blonde hair and blue eyes"
+                "name": "Aria",
+                "role": "Friend",
+                "personality_traits": ["Intelligent", "Loyal"],
+                "appearance": "A girl with long blonde hair and blue eyes"
             },
             {
-            "name": "Nimbus",
-            "role": "Talking animal",
-            "personality_traits": ["Wise", "Witty"],
-            "appearance": "A talking owl with golden feathers"
+                "name": "Nimbus",
+                "role": "Talking animal",
+                "personality_traits": ["Wise", "Witty"],
+                "appearance": "A talking owl with golden feathers"
             }
         ],
         "setting": "Enchanted forest",
