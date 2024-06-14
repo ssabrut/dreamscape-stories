@@ -19,3 +19,12 @@ class StoryGeneratorCrew():
     @task
     def input_aggregator_task(self) -> Task:
         return Task(config=self.tasks_config['input_aggregator_task'], agent=self.input_aggregator_agent())
+
+    @crew
+    def crew(self) -> Crew:
+        return Crew(
+            agents=self.agents,
+            tasks=self.tasks,
+            process=Process.sequential,
+            verbose=2
+        )
