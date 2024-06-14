@@ -13,5 +13,9 @@ class StoryGeneratorCrew():
         self.llm = ChatGroq(temperature=0, model="mixtral-8x7b-32768")
 
     @agent
-    def input_aggregator(self) -> Agent:
+    def input_aggregator_agent(self) -> Agent:
         return Agent(config=self.agents_config['input_aggregator_agent'], llm=self.llm)
+
+    @task
+    def input_aggregator_task(self) -> Task:
+        return Task(config=self.tasks_config['input_aggregator_task'], agent=self.input_aggregator_agent())
